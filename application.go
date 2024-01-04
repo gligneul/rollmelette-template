@@ -1,6 +1,9 @@
 package main
 
 import (
+	"context"
+	"log/slog"
+
 	"github.com/gligneul/rollmelette"
 )
 
@@ -19,4 +22,14 @@ func (a *MyApplication) Advance(
 func (a *MyApplication) Inspect(env rollmelette.EnvInspector, payload []byte) error {
 	// Handle inspect input
 	return nil
+}
+
+func main() {
+	ctx := context.Background()
+	opts := rollmelette.NewRunOpts()
+	app := new(MyApplication)
+	err := rollmelette.Run(ctx, opts, app)
+	if err != nil {
+		slog.Error("application error", "error", err)
+	}
 }
