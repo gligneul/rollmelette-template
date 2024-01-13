@@ -4,7 +4,7 @@ go 1.21.1
 
 require (
 	github.com/ethereum/go-ethereum v1.13.10
-	github.com/gligneul/rollmelette v0.0.0-20240111171853-3fb3d3a04456
+	github.com/gligneul/rollmelette v0.1.0
 	github.com/stretchr/testify v1.8.4
 )
 
