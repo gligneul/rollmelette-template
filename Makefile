@@ -7,7 +7,7 @@ lint: ## Run the golangci linter
 
 .PHONY: test
 test: ## Run the application unit tests
-	go test ./...
+	go test -v ./...
 
 .PHONY: dev
 dev: ## Run the application inside nonodo
